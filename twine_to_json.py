@@ -63,7 +63,8 @@ def find_closing_tag(line):
 def reformat_html(filepath):
     """Read Twine2's HTML format and write it out in a tidier format.
     
-    Writes to the same directoy as filepath, just with _temp in the name."""
+    Writes to the same directoy as filepath, just with _temp in the name.
+    Returns the filepath of the resulting file."""
 
     output_file = filepath.replace('.html', '_temp.html')
     with open(filepath) as in_file, open(output_file, 'w') as out_file:
@@ -83,6 +84,7 @@ def reformat_html(filepath):
                 close_index = find_closing_tag(line)
                 out_file.write(line[:close_index + 1] + '\n')
                 line = line[close_index + 1:]
+    return output_file
 
 
 def read_as_json(filepath):
@@ -171,14 +173,10 @@ def parse_tag(tag, data):
         
 
 if __name__ == "__main__":
-    # Sample filepaths
+    # Sample test
     inpath = r'Sample Data\TwineInput.html'
     outpath = r'Sample Data\FinalOutput.json'
-    
-    # First format to better HTML
     result = reformat_html(inpath)
-    # Now read that as JSON
     data = read_as_json(result)
-    # And dump it to a file
     with open(outpath, 'w') as f:
         dump(data, f, indent=4)

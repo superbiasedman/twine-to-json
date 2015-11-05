@@ -26,7 +26,7 @@
         }, 
         {
             "position": "314,225", 
-            "text": "This passage goes nowhere.\n", 
+            "text": "This passage goes nowhere.\n\n", 
             "pid": "3", 
             "name": "Passage_C", 
             "tags": "tag-1 tag-2"
