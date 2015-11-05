@@ -1,0 +1,44 @@
+{
+    "style": {
+        "type": "text/twine-css", 
+        "role": "stylesheet", 
+        "id": "twine-user-stylesheet"
+    }, 
+    "script": {
+        "type": "text/twine-javascript", 
+        "role": "script", 
+        "id": "twine-user-script"
+    }, 
+    "tw-passagedata": [
+        {
+            "position": "197,62", 
+            "text": "[[Passage B]]\n[[Go to passage C|Passage C]]\n", 
+            "pid": "1", 
+            "name": "Passage_A", 
+            "tags": ""
+        }, 
+        {
+            "position": "114,225", 
+            "text": "This is passage B\n[[Passage B]] \n[[Passage A]] \n", 
+            "pid": "2", 
+            "name": "Passage_B", 
+            "tags": "tag-2"
+        }, 
+        {
+            "position": "314,225", 
+            "text": "This passage goes nowhere.\n", 
+            "pid": "3", 
+            "name": "Passage_C", 
+            "tags": "tag-1 tag-2"
+        }
+    ], 
+    "tw-storydata": {
+        "startnode": "1", 
+        "name": "Sample", 
+        "format": "Harlowe", 
+        "creator": "Twine", 
+        "creator-version": "2.0.8", 
+        "ifid": "1A382346-FBC1-411F-837E-BAB9EE2FB2E9", 
+        "options": ""
+    }
+}
